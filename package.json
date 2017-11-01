@@ -1,7 +1,7 @@
 {
   "name": "gulp-add-query-fragment",
-  "version": "1.0.0",
-  "description": "给指定元素链接添加query参数和fragment锚点",
+  "version": "1.0.1",
+  "description": "Add the query parameter and the fragment anchor to the specified element link",
   "main": "index.js",
   "scripts": {
     "gulp": "./node_modules/gulp/bin/gulp.js --cwd example-src",
