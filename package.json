@@ -1,6 +1,6 @@
 {
   "name": "gulp-add-query-fragment",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Add the query parameter and the fragment anchor to the specified element link",
   "main": "index.js",
   "scripts": {
@@ -9,12 +9,14 @@
   },
   "author": "chenjt",
   "license": "MIT",
-  "devDependencies": {
-    "gulp": "3.9.1",
+  "dependencies": {
     "gulp-util": "3.0.8",
     "through2": "2.0.3",
     "jsdom": "11.3.0",
     "lodash": "4.17.4",
     "urijs": "1.19.0"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1"
   }
 }
