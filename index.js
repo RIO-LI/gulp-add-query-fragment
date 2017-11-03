@@ -62,9 +62,10 @@ const resolveHtml = (doc, options) => {
 }
 
 const addQueryFragment = (options) => {
-    try {
-        options = options == null ? [] : options
-        return through2.obj(function (file, enc, cb) {
+
+    options = options == null ? [] : options
+    return through2.obj(function (file, enc, cb) {
+        try {
             if (file.isNull()) {
                 cb(null, file)
             }
@@ -73,10 +74,10 @@ const addQueryFragment = (options) => {
             doc.innerHTML = resolveHtml(doc, options).innerHTML
             file.contents = new Buffer(fileDOM.serialize())
             cb(null, file)
-        })
-    } catch (e) {
-        throw new PluginError(PLUGIN_NAME, e);
-    }
+        } catch (e) {
+            throw new PluginError(PLUGIN_NAME, e);
+        }
+    })
 }
 
 module.exports = addQueryFragment 
